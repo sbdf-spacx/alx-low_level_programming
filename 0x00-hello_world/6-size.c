@@ -1,17 +1,15 @@
-#!/bin/bash
-gcc -S -masm=intel $CFILE
-
-Task 8
-Vi 101-quote.c
-
-#include <unistd.h>
+#include <stdio.h>
 /**
-*main-program entry point.
-*
-*Return: 1 on success.
-*/
+ * main - Entry point
+ *
+ * Return: always 0
+ */
 int main(void)
 {
-	write(2, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
-	return (1);
+        printf("Size of a char: %d byte(s)\n", sizeof(char));
+        printf("Size of an int: %d byte(s)\n", sizeof(int));
+        printf("Size of a long int: %d byte(s)\n", sizeof(long int));
+        printf("Size of a long long int: %d byte(s)\n", sizeof(long long int));
+        printf("Size of a float: %d byte(s)\n", sizeof(float));
+        return (0);
 }
